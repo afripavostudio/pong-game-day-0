@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @font-face {
+        font-family: "font-2d";
+        src: url("./fonts/font.ttf");
+      }
+
+      body {
+        overflow: hidden;
+      }
+
+      .canvas-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      canvas {
+        display: block;
+        image-rendering: crisp-edges;
+      }
+
+      #fps {
+        position: fixed;
+        right: 50px;
+        bottom: 50px;
+        z-index: 10;
+
+        color: orange;
+      }
+    </style>
+    <title>Game Dev-HTML5 Canvas: Day-0</title>
+  </head>
+  <body>
+    <p id="fps">0</p>
+    <div class="canvas-container">
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- AUDIOS -->
+    <audio
+      id="wall-sound"
+      src="./sounds/Blip_Select2.wav"
+      preload="auto"
+    ></audio>
+    <audio
+      id="paddle-sound"
+      src="./sounds/Pickup_Coin4.wav"
+      preload="auto"
+    ></audio>
+    <audio id="win-sound" src="./sounds/Powerup2.wav" preload="auto"></audio>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
